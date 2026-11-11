@@ -1,0 +1,51 @@
+/* FitnessLegend: short, responsive motion without delaying any action. */
+:root{--motion-ease:cubic-bezier(.2,.8,.2,1);--motion-spring:cubic-bezier(.22,1,.36,1)}
+:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link){position:relative;transition:transform 180ms var(--motion-spring),background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 200ms ease;transform-origin:center}
+:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link):not(:disabled):not([aria-disabled="true"]):active{transform:translateY(1px) scale(.965);transition-duration:75ms}
+:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link):not(:disabled):not([aria-disabled="true"]):focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link).motion-surface{overflow:hidden}
+.motion-ripple{position:absolute;display:block;pointer-events:none;user-select:none;border-radius:50%;background:currentColor;opacity:0;transform:scale(0);animation:fl-ripple 520ms var(--motion-ease) both;z-index:1}
+@keyframes fl-ripple{0%{transform:scale(0);opacity:.21}55%{opacity:.1}100%{transform:scale(1);opacity:0}}
+.btn.primary{box-shadow:0 0 0 0 transparent;overflow:hidden;isolation:isolate}
+.btn.primary::before{content:"";position:absolute;inset:-20% auto -20% -80%;width:45%;pointer-events:none;background:linear-gradient(100deg,transparent,#fff6,transparent);transform:skewX(-18deg);transition:translate 520ms var(--motion-ease);opacity:0}
+.btn.primary:active::before{opacity:.35}
+.favorite-btn svg,.icon-btn svg,.nav-link svg,.bottom-nav a svg,.btn svg,.text-btn svg{transition:transform 210ms var(--motion-spring),fill 180ms ease}
+.favorite-btn.selected svg{transform:scale(1.1)}
+input[type=checkbox]{transition:filter 160ms ease,transform 160ms var(--motion-spring)}
+input[type=checkbox]:active{transform:scale(.9)}
+@media(hover:hover) and (pointer:fine){
+ :is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link):not(:disabled):not([aria-disabled="true"]):hover{transform:translateY(-2px)}
+ .btn:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 7px 17px #0002}
+ .btn.primary:hover:not(:disabled){box-shadow:0 5px 20px #92c75424}
+ .btn.primary:hover:not(:disabled)::before{translate:430% 0;opacity:.6}
+ .icon-btn:hover:not(:disabled) svg{transform:rotate(-7deg) scale(1.08)}
+ .favorite-btn:hover:not(:disabled) svg{transform:scale(1.16)}
+ .nav-link:hover svg,.bottom-nav a:hover svg{transform:translateX(2px)}
+ .article-card:hover:not(:disabled){transform:translateY(-4px);box-shadow:0 12px 26px #0002;border-color:var(--muted)}
+ .day-cell:hover:not(:disabled),.choice:hover:not(:disabled),.chip:hover:not(:disabled){border-color:var(--accent);box-shadow:0 3px 13px #0001}
+ .set-btn:hover:not(:disabled){box-shadow:0 3px 13px #0002}
+}
+/* Press wins over hover on desktop, too. */
+:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link):not(:disabled):not([aria-disabled="true"]):active{transform:translateY(1px) scale(.965);transition-duration:75ms}
+/* Only route changes receive this class; ordinary re-renders stay steady. */
+#main.page-enter{--page-shift:15px}
+#main.page-enter.page-back{--page-shift:-15px}
+#main.page-enter>:not(.footer){animation:fl-page-enter 380ms var(--motion-spring) both}
+#main.page-enter>:nth-child(2){animation-delay:35ms}
+#main.page-enter>:nth-child(3){animation-delay:65ms}
+#main.page-enter>:nth-child(4){animation-delay:90ms}
+#main.page-enter>:nth-child(n+5){animation-delay:110ms}
+@keyframes fl-page-enter{from{opacity:0;transform:translate3d(var(--page-shift,0),14px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+.modal-overlay{animation:none}
+.modal-overlay.modal-arriving{animation:fade 180ms ease both}
+.modal-arriving>.modal{animation:fl-dialog-enter 260ms var(--motion-spring) both}
+@keyframes fl-dialog-enter{from{opacity:0;transform:translateY(14px) scale(.975)}to{opacity:1;transform:translateY(0) scale(1)}}
+[data-motion=off] *,[data-motion=off] *::before,[data-motion=off] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+[data-motion=off] :is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link),[data-motion=off] :is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link) svg,[data-motion=off] input[type=checkbox]{transition:none!important;transform:none!important}
+[data-motion=off] #main.page-enter>:not(.footer),[data-motion=off] .modal-arriving,[data-motion=off] .modal-arriving>.modal{animation:none!important;opacity:1!important;transform:none!important}
+[data-motion=off] .motion-ripple,[data-motion=off] .btn.primary::before{display:none!important}
+@media(prefers-reduced-motion:reduce){
+ :is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link),:is(button,a.btn,a.text-btn,a.nav-link,a.profile-link,.bottom-nav a,.brand,.source-link) svg,input[type=checkbox]{transition:none!important;transform:none!important}
+ #main.page-enter>:not(.footer),.modal-arriving,.modal-arriving>.modal{animation:none!important;opacity:1!important;transform:none!important}
+ .motion-ripple,.btn.primary::before{display:none!important}
+}

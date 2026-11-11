@@ -1,0 +1,47 @@
+(function(root){
+ 'use strict';
+ const B=typeof module!=='undefined'?require('./meal-builder.js'):root.FLMealBuilder;
+ function create(ctx){
+  const {E,Seed,esc,attr,icon,btn,notice,field,errorBox,formError,openModal,closeModal,today,uid,getState,commit,toast,render,go}=ctx;
+  let draft=null,preview=null;
+  const num=(n,dec=0)=>Number(n).toLocaleString('ru-RU',{maximumFractionDigits:dec});
+  const options=()=>({budget:draft.budget,kcal:draft.kcal,protein:draft.protein,maxMinutes:draft.maxMinutes,slots:draft.slots,priority:draft.priority,exclude:draft.exclude});
+  function open(){const state=getState();draft={date:today(),budget:state.profile?.budget>0?state.profile.budget:350,kcal:state.targets.kcal,protein:state.targets.p,maxMinutes:30,slots:4,priority:'economy',exclude:[]};preview=null;drawForm();}
+  function drawForm(){
+   const foods=getState().foods;
+   openModal('meal-builder','Блюда под бюджет',`<div class="mealplan-intro"><span class="pill green">${icon('food',14)} КОНСТРУКТОР ПИТАНИЯ</span><p>Выбери бюджет, время и продукты, которые хочешь исключить. Получишь сочетание блюд, порции, КБЖУ и список покупок.</p></div>${notice('Цены учебные, не цены магазина. Положительные цены из твоего справочника имеют приоритет; для известных продуктов без цены используются отмеченные плановые примеры.')}<form id="mealplan-form"><div class="form-grid">${field('Бюджет на выбранные блюда, ₽','budget','number',draft.budget,'min="1" max="10000" step="0.01" required')}${field('Дата дневника','date','date',draft.date,'required')}<label class="field">Количество приёмов пищи<select name="slots"><option value="3" ${draft.slots===3?'selected':''}>3 · завтрак, обед, ужин</option><option value="4" ${draft.slots===4?'selected':''}>4 · с перекусом</option></select></label><label class="field">Время по карточке одного блюда<select name="maxMinutes">${[5,10,15,20,30,60].map(n=>`<option value="${n}" ${draft.maxMinutes===n?'selected':''}>До ${n} минут</option>`).join('')}</select></label>${field('Твой ручной ориентир, ккал · необязательно','kcal','number',draft.kcal??'','min="1000" max="6000" step="1"')}${field('Твой ручной ориентир белка, г · необязательно','protein','number',draft.protein??'','min="10" max="700" step="1"')}<label class="field wide">Что учитывать при выборе<select name="priority">${Object.entries({economy:'Ближе к ориентирам и дешевле',protein:'Больше белка за стоимость',energy:'Больше калорий за стоимость',light:'Меньше калорий при прочих условиях'}).map(([key,label])=>`<option value="${key}" ${draft.priority===key?'selected':''}>${label}</option>`).join('')}</select></label></div><p class="mealplan-note">Ориентиры не рассчитываются по твоему телу: это вручную заданные числа из дневника. Если не нужны, оставь поля пустыми. Время некоторых карточек — сборка из готовых продуктов; подготовка мяса и круп считается отдельно.</p><details class="mealplan-exclusions"><summary>Исключить продукты · выбрано ${draft.exclude.length}</summary><p>Исключение проверяется по ингредиентам рецепта. Оно не заменяет проверку аллергенов и состава на упаковке.</p><div class="mealplan-food-choices">${foods.map(f=>`<label><input type="checkbox" name="exclude" value="${attr(f.id)}" ${draft.exclude.includes(f.id)?'checked':''}>${esc(f.name)}</label>`).join('')}</div></details>${errorBox()}<div class="modal-buttons">${btn('Отмена','modal-close')}${btn('Подобрать блюда','mealplan-build','food','primary','type="submit"')}</div></form>`,true);
+  }
+  function calculate(){try{return B.build(Seed.recipes,getState().foods,options());}catch(error){return {ok:false,reason:error.message};}}
+  function difference(value,unit){return value===null?'Не задан':Math.abs(value)<.05?'Совпадает с ориентиром':`${value>0?'Больше':'Меньше'} на ${num(Math.abs(value),1)} ${unit}`;}
+  function drawPreview(){
+   const r=preview;if(!r)return;
+   const content=`<div class="mealplan-intro"><span class="pill green">${icon('food',14)} ПРЕДПРОСМОТР</span><h3>${esc(draft.date)} · ${num(draft.budget,2)} ₽</h3></div>${!r.ok?`<p class="split-error" role="alert">${esc(r.reason)}</p>${r.unknownPrices?.length?notice('Нет цены для продуктов: '+r.unknownPrices.map(id=>esc(getState().foods.find(f=>f.id===id)?.name||id)).join(', ')):''}`:`<div class="mealplan-summary"><div><strong>≈ ${num(r.cost,2)} ₽</strong><span>по учебным ценам · остаток ${num(draft.budget-r.cost,2)} ₽</span></div><div><strong>${num(r.totals.kcal)} ккал</strong><span>Б ${num(r.totals.p,1)} · Ж ${num(r.totals.f,1)} · У ${num(r.totals.c,1)} г</span></div></div><div class="mealplan-targets"><p>Калории: ${difference(r.gaps.kcal,'ккал')}</p><p>Белок: ${difference(r.gaps.protein,'г')}</p></div><div class="mealplan-meals">${r.meals.map(meal=>`<article><div class="mealplan-meal-head"><span class="pill">${B.MEALS[meal.meal]}</span><small>${meal.minutes} мин по карточке</small></div><h3>${esc(meal.title)}</h3><p>${num(meal.portion,1)} порц. · ≈ ${num(meal.cost,2)} ₽ · ${num(meal.totals.kcal)} ккал · белок ${num(meal.totals.p,1)} г</p><details><summary>Ингредиенты и приготовление</summary><ul>${meal.ingredients.map(f=>`<li>${esc(f.name)} — ${num(f.grams,1)} г</li>`).join('')}</ul>${meal.waterMl?`<p>Вода — ${num(meal.waterMl)} мл, без калорий и стоимости.</p>`:''}<ol>${meal.steps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol><p>${esc(meal.note)}</p><p><strong>Аллергены:</strong> ${esc(meal.allergens)}</p></details></article>`).join('')}</div><section class="mealplan-shopping"><h3>Список продуктов</h3><p>Масса относится к состоянию из названия: например, варёная крупа взвешивается после приготовления. Это не пересчёт в вес сырой покупки.</p><div class="mealplan-shopping-list">${r.shopping.map(f=>`<div><span><strong>${esc(f.name)}</strong><small>${esc(f.priceSource)} · ${num(f.unitPrice,2)} ₽ / 100 г${f.estimatedPrice?' · пример':''}</small></span><span>${num(f.grams,1)} г<br><small>≈ ${num(f.cost,2)} ₽</small></span></div>`).join('')}</div>${r.waterMl?`<p>Вода в рецептах — ${num(r.waterMl)} мл, стоимость не учитывается.</p>`:''}${ctx.downloadText?btn('Скачать список TXT','mealplan-export','download','ghost'):''}</section>${r.warnings.map(w=>notice(esc(w))).join('')}${notice('Подтверждение добавит ингредиенты всех выбранных блюд в дневник на '+esc(draft.date)+'. Уже записанная еда не удаляется. Проверь, не внесены ли эти блюда ранее. Выбор блюд сам по себе ничего не записывает.')}` }<div class="modal-buttons">${btn('Отмена','modal-close')}${btn('Изменить условия','mealplan-edit','left')}${r.ok?btn('Записать ингредиенты в дневник','mealplan-save','check','primary'):''}</div>`;
+   openModal('meal-preview','Блюда и список продуктов',content,true);
+  }
+  function submit(form){
+   if(form.id!=='mealplan-form')return false;
+   const fd=new FormData(form),value=k=>String(fd.get(k)??'').trim(),number=k=>value(k)===''?null:Number(value(k));
+   draft={date:value('date'),budget:number('budget'),kcal:number('kcal'),protein:number('protein'),slots:number('slots'),maxMinutes:number('maxMinutes'),priority:value('priority'),exclude:[...new Set(fd.getAll('exclude').map(String))]};
+   if(!/^\d{4}-\d{2}-\d{2}$/.test(draft.date)||E.iso(E.parse(draft.date))!==draft.date){formError('Проверь дату дневника.');return true;}
+   preview=calculate();if(!preview.ok&&(!Number.isFinite(draft.budget)||draft.budget<1||draft.budget>10000)){formError(preview.reason);return true;}drawPreview();return true;
+  }
+  function action(a){
+   if(!a.startsWith('mealplan-'))return false;
+   if(a==='mealplan-open'){open();return true;}
+   if(a==='mealplan-edit'&&draft){preview=null;drawForm();return true;}
+   if(a==='mealplan-export'&&preview?.ok&&ctx.downloadText){const r=preview,text=['FitnessLegend — список продуктов',draft.date,'Цены учебные, не цены магазина.',...r.shopping.map(f=>`${f.name}: ${num(f.grams,1)} г; примерно ${num(f.cost,2)} ₽ (${num(f.unitPrice,2)} ₽/100 г; ${f.priceSource})`),`Вода: ${num(r.waterMl)} мл`,`Итого: примерно ${num(r.cost,2)} ₽`].join('\n');ctx.downloadText(text,`FitnessLegend_продукты_${draft.date}.txt`,'text/plain;charset=utf-8');return true;}
+   if(a==='mealplan-save'){
+    if(!preview?.ok){toast('Сначала подбери и проверь блюда.');return true;}
+    const seen=preview.fingerprint,current=calculate();if(!current.ok){preview=current;drawPreview();toast('Условия изменились: подходящий набор больше не помещается в бюджет.');return true;}
+    if(current.fingerprint!==seen){preview=current;drawPreview();toast('Справочник или цены изменились. Проверь обновлённый вариант и подтверди ещё раз.');return true;}
+    const candidate=E.clone(getState()),entries=current.meals.flatMap(meal=>meal.ingredients.map(f=>({id:uid('menu-food'),foodId:f.id,name:f.name,date:draft.date,meal:meal.meal,grams:f.grams,kcal:f.kcal,p:f.p,f:f.f,c:f.c})));
+    if(candidate.diary.length+entries.length>10000){toast('Дневник заполнен: сохрани резервную копию и освободи место.');return true;}
+    candidate.diary.push(...entries);if(!commit(candidate)){toast('Не удалось сохранить набор блюд. Проверь хранилище.');return true;}
+    const date=draft.date;preview=null;closeModal();render();if(ctx.onAdded)ctx.onAdded(date);else go('nutrition');toast('Ингредиенты записаны на '+date+'.');return true;
+   }
+   return true;
+  }
+  return {open,action,submit};
+ }
+ const value={create};root.FLMealBuilderUI=value;if(typeof module!=='undefined')module.exports=value;
+})(typeof window!=='undefined'?window:globalThis);

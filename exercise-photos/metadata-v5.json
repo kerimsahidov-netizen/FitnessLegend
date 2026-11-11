@@ -1,0 +1,426 @@
+{
+  "version": 5,
+  "project": "FitnessLegend",
+  "createdDate": "2026-11-07",
+  "source": "Созданы специально для FitnessLegend встроенным ImageGen. Персонажи вымышлены; иллюстрации не заменяют текстовую инструкцию и разбор с тренером.",
+  "processing": "Только пропорциональное уменьшение и WebP, без кадрирования.",
+  "assets": [
+    {
+      "id": "hero-v5",
+      "path": "assets/hero-v5.webp",
+      "prompt": "Create ONE cinematic premium fitness editorial photograph for a dark modern fitness dashboard, horizontal 3:2. Athletic adult man and adult woman in modest charcoal/olive training t-shirts and long black sports trousers, standing in a dramatic modern gym, one holding dumbbells at rest, calm confident expressions. Neon lime and cool turquoise rim lighting, dark graphite background with subtle haze and architectural light strips, sophisticated realistic sports photography, natural anatomy, no body transformation, no text, no logos, no watermark. Subjects in right half, left half dark clean negative space for website headline. Fully clothed welcoming performance atmosphere, not aggressive. This is a fictional brand illustration.",
+      "file": "hero-v5.webp",
+      "width": 1440,
+      "height": 960,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 69334,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "barbell-curl",
+      "path": "exercise-photos/barbell-curl.webp",
+      "prompt": "One photorealistic fitness instruction photo, horizontal 3:2. Adult man in plain olive t-shirt black long trousers, whole body visible, standing strict barbell biceps curl midway lifting straight bar from thighs to torso, palms up, elbows beside ribs, upright stable torso no swinging, realistic light barbell two hands equal grip. Clean dark forest green gym studio, soft neutral lighting, no text/logos/watermark. Equipment and body fully in frame, correct human anatomy.",
+      "file": "barbell-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 24900,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "ez-bar-curl",
+      "path": "exercise-photos/ez-bar-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph 3:2 landscape, full body adult woman in loose sage athletic t-shirt long black sports trousers, standing biceps curl holding unmistakable zigzag EZ curl bar in both hands, palms semi-supinated, elbows close to ribs, bar halfway up, neutral wrists stable upright torso. Dark forest green gym studio, clean professional lighting, realistic anatomy. No text logos watermark. All body and bar visible.",
+      "file": "ez-bar-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 48510,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "incline-dumbbell-curl",
+      "path": "exercise-photos/incline-dumbbell-curl.webp",
+      "prompt": "One photorealistic fitness instruction photograph horizontal 3:2. Adult man fully clothed olive tee long black trousers sitting with back against adjustable bench inclined at about 55 degrees, performing incline dumbbell biceps curls, upper arms hanging vertically behind torso line, palms upward, elbows bending, no shoulder swing. Full person feet and entire inclined bench and two light dumbbells visible. Dark green gym studio neutral soft lighting. No text logos watermark; natural anatomy.",
+      "file": "incline-dumbbell-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 39756,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "concentration-curl",
+      "path": "exercise-photos/concentration-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph, horizontal 3:2, adult athlete in plain sage/olive athletic t-shirt and long black sports trousers, natural anatomy, full person and all essential equipment visible. Clean dark forest green gym studio with soft professional lighting, realistic light resistance equipment. No text, logos, watermark, collage or extra limbs. Seated man on flat bench, feet wide on floor, one elbow braced against the inside of the same-side thigh just above knee, one hand performing a concentration dumbbell curl toward shoulder, other hand resting on opposite thigh. Torso slightly forward stable, palm upward. Clearly one-arm seated concentration curl.",
+      "file": "concentration-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 58772,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "preacher-dumbbell-curl",
+      "path": "exercise-photos/preacher-dumbbell-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph, horizontal 3:2, adult athlete in plain sage/olive athletic t-shirt and long black sports trousers, natural anatomy, full person and all essential equipment visible. Clean dark forest green gym studio with soft professional lighting, realistic light resistance equipment. No text, logos, watermark, collage or extra limbs. Woman seated at dedicated preacher curl bench with broad sloping padded arm support under upper arm, one upper arm supported on angled pad, performing single arm supinated dumbbell preacher curl halfway up. Shoulder stays down, wrist neutral, elbow not hyperextended. Entire preacher bench visible.",
+      "file": "preacher-dumbbell-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 55334,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "cable-curl",
+      "path": "exercise-photos/cable-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph, horizontal 3:2, adult athlete in plain sage/olive athletic t-shirt and long black sports trousers, natural anatomy, full person and all essential equipment visible. Clean dark forest green gym studio with soft professional lighting, realistic light resistance equipment. No text, logos, watermark, collage or extra limbs. Man standing facing a cable machine, performing two-hand supinated biceps curl with short straight handle connected to LOW pulley near floor. Cable taut diagonally from low machine pulley to hands at waist/chest height. Upper arms held beside ribs, stable upright body, no back swinging. Clear low pulley cable route.",
+      "file": "cable-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 48688,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "rope-hammer-curl",
+      "path": "exercise-photos/rope-hammer-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph, horizontal 3:2, adult athlete in plain sage/olive athletic t-shirt and long black sports trousers, natural anatomy, full person and all essential equipment visible. Clean dark forest green gym studio with soft professional lighting, realistic light resistance equipment. No text, logos, watermark, collage or extra limbs. Woman standing facing a low pulley cable machine performing rope hammer biceps curl. Two hands hold opposite ends of thick rope attachment with palms facing inward, elbows against ribs, hands lifted halfway toward shoulders. Cable connected from rope to low pulley. Show accurate neutral grip and visible rope/cable path.",
+      "file": "rope-hammer-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 58854,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "spider-curl",
+      "path": "exercise-photos/spider-curl.webp",
+      "prompt": "One photorealistic instructional exercise photograph, horizontal 3:2, adult athlete in plain sage/olive athletic t-shirt and long black sports trousers, natural anatomy, full person and all essential equipment visible. Clean dark forest green gym studio with soft professional lighting, realistic light resistance equipment. No text, logos, watermark, collage or extra limbs. Man chest-supported prone on incline bench angled about 45 degrees, feet securely on floor, chest on pad, upper arms hanging vertically below shoulders over front edge of bench, curling two light dumbbells palms up. Midway bent elbows, head neutral and not pressed on bench. Clearly chest-down supported spider biceps curl, entire bench visible.",
+      "file": "spider-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 53424,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "reverse-ez-curl",
+      "path": "exercise-photos/reverse-ez-curl.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Woman standing strict reverse curl with a zigzag EZ bar held with palms DOWN (pronated grip), bent elbows beside ribs, bar midway rising, wrists straight. Make overhand grip unmistakable, body upright without swinging.",
+      "file": "reverse-ez-curl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 46894,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "cable-overhead-extension",
+      "path": "exercise-photos/cable-overhead-extension.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Man standing in staggered stance with back to a cable machine, doing overhead triceps rope extension. Rope connected to upper pulley behind him, both hands above and slightly ahead of head, elbows point forward-up and bend to about90degrees, torso stable slightly forward, no lumbar arch. Cable and rope clear and not intersecting body.",
+      "file": "cable-overhead-extension.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 27690,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "dumbbell-kickback",
+      "path": "exercise-photos/dumbbell-kickback.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Woman doing one-arm dumbbell triceps kickback, torso hinged forward and free hand braced on flat bench. Working upper arm held close to torso horizontal, elbow nearly straight, small dumbbell behind hip. Neutral spine. Full bench and body visible.",
+      "file": "dumbbell-kickback.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 33710,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "lying-dumbbell-extension",
+      "path": "exercise-photos/lying-dumbbell-extension.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Man lying supine on flat gym bench, feet planted on floor, doing lying dumbbell triceps extension. Upper arms vertical above shoulders, elbows bent so light dumbbells descend beside ears, not over face; palms face each other. Entire man bench and dumbbells visible, natural elbow positions.",
+      "file": "lying-dumbbell-extension.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 31384,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "dumbbell-bench-press",
+      "path": "exercise-photos/dumbbell-bench-press.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Woman lying supine on horizontal gym bench doing two-dumbbell chest press. Feet firmly on floor, upper back supported, elbows bent about90degrees beside torso, dumbbells just above chest level, forearms vertical, elbows not flared straight sideways. Whole body and bench visible.",
+      "file": "dumbbell-bench-press.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 36360,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "incline-dumbbell-press",
+      "path": "exercise-photos/incline-dumbbell-press.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, horizontal 3:2. Entire adult athlete and all essential equipment in frame, plain olive sports t-shirt and long black trousers, realistic anatomy and neutral wrists. Clean dark forest green gym studio, professional lighting. No text, logos, watermark, collage, arrows or other people. Man lying on adjustable gym bench inclined about30degrees doing incline dumbbell chest press. Feet planted, back against inclined pad, elbows bent near shoulderlevel, dumbbells above upper chest, forearms close to vertical. Show whole athlete and clear30degreebench. Neutral realistic pose.",
+      "file": "incline-dumbbell-press.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 33248,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "cable-chest-fly",
+      "path": "exercise-photos/cable-chest-fly.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Woman centered between two cable towers, staggered stable stance, performing chest-height standing cable fly. Both handles connected to cables from pulleys at shoulderheight, arms partly forward and out to sides with elbows softly bent, bringing hands together in front of chest. Do not turn it into a cable press or shoulder raise; show both cable lines.",
+      "file": "cable-chest-fly.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 55512,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "chest-supported-row",
+      "path": "exercise-photos/chest-supported-row.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Man chest-down supported on an inclinebench at45degrees, feet planted, pulling two dumbbells toward hips with elbows back. Chest remains against pad, neck neutral. Clearly chest-supported row rather than bicepscurl, fullbench visible.",
+      "file": "chest-supported-row.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 41532,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "straight-arm-pulldown",
+      "path": "exercise-photos/straight-arm-pulldown.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Woman standing facing highpulley cablemachine, slight hiphinge flatback, holding shortbar with arms nearly straight and only softelbows, pulling handle down to thighs. Upperpulley cable taut, hands at hipheight, no deep elbowbend. Demonstrate straightarm latpulldown, not tricepspushdown.",
+      "file": "straight-arm-pulldown.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 35706,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "single-arm-cable-row",
+      "path": "exercise-photos/single-arm-cable-row.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Man seated facing lowpulley cablemachine, feet supported, one hand holding Dhandle with elbow drawn beside hip in horizontal singlearm cable row. Torso upright square to machine, otherhand lightly on thigh, no torso twist. Cable from lowpulley forward to hand. Fullsetup visible.",
+      "file": "single-arm-cable-row.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 64408,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "rear-delt-fly",
+      "path": "exercise-photos/rear-delt-fly.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Woman bentforward from hips with flat neutralback, softknees, performing reverse dumbbell fly. Light dumbbells in hands lifted outward to sides about shoulderheight relative to torso, softelbows, no shrug. Threequarter camera clear rearshoulder movement, full body.",
+      "file": "rear-delt-fly.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 34812,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "arnold-press",
+      "path": "exercise-photos/arnold-press.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full body and essential equipment visible, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or additional people. Man seated upright against nearverticalbench, feet onfloor, demonstrating midpoint of Arnold dumbbell shoulderpress. Two dumbbells at headheight, elbows forward-outward and bent, palms transitioning from inward toward forward, shoulders not shrugged. Entirebench and athlete visible, stable neutralspine.",
+      "file": "arnold-press.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 38714,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "cable-lateral-raise",
+      "path": "exercise-photos/cable-lateral-raise.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full person and all essential equipment in frame, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or other people. Woman standing sideways beside lowpulley cablemachine, holding Dhandle in far hand and raising that arm outward to about shoulderheight, softelbow and neutralwrist, shoulder not shrugged, body upright. Cable clearly runs from lowpulley across infront of hips to raisedhand. Singlearm lateral shoulderraise.",
+      "file": "cable-lateral-raise.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 44756,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "split-squat",
+      "path": "exercise-photos/split-squat.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full person and all essential equipment in frame, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or other people. Man performing stationary split squat with no weights, feet remain in staggered stance onfloor, backheel lifted, frontfoot flat, both knees bent, backknee abovefloor, torso upright stable. Clearly fullbody mid-repetition split squat, not a forwardstep orjump.",
+      "file": "split-squat.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 45412,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "hip-thrust",
+      "path": "exercise-photos/hip-thrust.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full person and all essential equipment in frame, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or other people. Woman performing barbell hip thrust with upperback supported across edge of a fixed flatbench, feet planted and shins nearvertical, knees bent, hips raised level with torso, neck neutral. Lightweight barbell with thick protective foam pad rests across hipcrease. Bench stable, entire setup visible; clear hipthrust not lying benchpress.",
+      "file": "hip-thrust.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 53834,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "goblet-sumo-squat",
+      "path": "exercise-photos/goblet-sumo-squat.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full person and all essential equipment in frame, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or other people. Man doing sumo goblet squat, comfortable wide stance feet turned slightly outward, knees tracking toes, holding one dumbbell vertically at chest, squat about parallel or slightly above, neutralspine heels planted. Wholebody and dumbbell visible, realistic stance not extreme.",
+      "file": "goblet-sumo-squat.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 50150,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    },
+    {
+      "id": "single-leg-rdl",
+      "path": "exercise-photos/single-leg-rdl.webp",
+      "prompt": "ONE photorealistic instructional fitness photograph, 3:2 landscape. Modestly clothed adult athlete in olive/sage tee and long black trousers, full person and all essential equipment in frame, natural anatomy. Dark forest green gym studio, soft professional lighting. No text logos watermark collage or other people. Woman performing singleleg Romanian deadlift with one light dumbbell in hand opposite supporting leg, soft knee onstandingleg, torso hinged forward fromhips flatback, otherleg extended backward and not too high, hips square and level. Fullbody, all feet inframe, balanced moderate range. Not a lunge.",
+      "file": "single-leg-rdl.webp",
+      "width": 1056,
+      "height": 704,
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "bytes": 44756,
+      "source": "OpenAI ImageGen, built-in",
+      "type": "AI-generated fictional illustration",
+      "reviewed": true
+    }
+  ],
+  "reviewNote": "Все 26 изображений просмотрены в контрольных листах. Иллюстрации не являются экспертной сертификацией техники."
+}

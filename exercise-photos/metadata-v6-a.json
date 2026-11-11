@@ -1,0 +1,331 @@
+{
+  "version": 6,
+  "source": "OpenAI built-in image_gen",
+  "synthetic": true,
+  "notice": "Изображения созданы ИИ как иллюстрации. Они не заменяют показ техники тренером; конструкция тренажёра в вашем зале может отличаться.",
+  "assets": [
+    {
+      "id": "seated-dumbbell-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Seated dumbbell biceps curl on a flat bench. Both elbows tucked beside ribs, forearms near horizontal palms up; feet flat on floor and torso upright. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "seated-dumbbell-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/seated-dumbbell-curl.webp",
+      "bytes": 63124,
+      "sha256": "f047a9c85c29bb54aab4364f3c65cc3b0f1c60afe9a91cb15ddd171b242ba55f",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "alternating-dumbbell-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing alternating supinated dumbbell biceps curl. Right forearm near horizontal palm up, right upper arm stationary beside ribs; left arm hangs down holding matching dumbbell. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "alternating-dumbbell-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/alternating-dumbbell-curl.webp",
+      "bytes": 54632,
+      "sha256": "f2c1310e5d058de5d4e24afdd913f17bc187beaabf6c2db25eea2b3abe07701c",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "cross-body-hammer-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing cross-body hammer curl with one dumbbell. Right elbow stays close to right ribs, neutral thumb-up grip brings right dumbbell diagonally toward left upper chest. Left arm holds its dumbbell at side. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "cross-body-hammer-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/cross-body-hammer-curl.webp",
+      "bytes": 63720,
+      "sha256": "47f1af8b01d1ee0757605d5d152d62a61b2fc384fdb26d55ce3065c2b5cedf43",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "zottman-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing Zottman dumbbell curl shown at upper transition. Both elbows bent and tucked at sides, dumbbells level below shoulders, palms rotated down for controlled lowering, wrists straight. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "zottman-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/zottman-curl.webp",
+      "bytes": 70008,
+      "sha256": "e484e79b6ffb551b9728691e3c1240aeafe25df5b9fc9336430456f409b65c8e",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "incline-hammer-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Incline hammer curl seated reclined against a bench backrest at 55 degrees. Neutral palms facing inward, elbows beside torso, forearms halfway raised holding two small dumbbells, feet planted. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "incline-hammer-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/incline-hammer-curl.webp",
+      "bytes": 73494,
+      "sha256": "9ed6ac1e8462020b8c72c79dc34764b5bacc5e3b2dc22bcd28b9912c2cfb6296",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "bayesian-cable-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing single-arm Bayesian biceps cable curl. Man faces away from low cable machine, cable from low pulley behind him to right hand, right upper arm angled slightly behind torso, right elbow bent and forearm raised palm up. Cable visible clear of body. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "bayesian-cable-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/bayesian-cable-curl.webp",
+      "bytes": 56964,
+      "sha256": "bbb42e157554040fd7025f0c5100a67939a52c6b8932666f4b1bfec6912562d5",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "machine-preacher-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Seated preacher biceps curl on a dedicated selectorized biceps machine. Both upper arms supported on angled pad, elbows aligned with machine pivot, forearms lifting lever handles palms up halfway. Show entire machine and feet planted. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "machine-preacher-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/machine-preacher-curl.webp",
+      "bytes": 60404,
+      "sha256": "65cc396d322cc0af9ca1c535cb348d8a4b96973938a37b09873f903eff59da41",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "high-cable-curl",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing two-arm high-cable biceps curl between cable towers. Upper arms out to sides at shoulder height, elbows bent bringing D-handles toward temples, left and right cables pull outward toward high side pulleys. No bar. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "high-cable-curl.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/high-cable-curl.webp",
+      "bytes": 63110,
+      "sha256": "128ad09bbe3ca7a1a3cdcb70acb912d515aee06a522c358ac6fcb801d0ebebbb",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "ez-lying-triceps-extension",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Lying EZ-bar triceps extension on flat bench. Man supine with feet flat, upper arms pointing up with slight backward angle, elbows bent allowing light EZ curl bar above and behind forehead with clear gap, both hands gripping the angled bar. Safe clear view of bar not touching face. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "ez-lying-triceps-extension.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/ez-lying-triceps-extension.webp",
+      "bytes": 64076,
+      "sha256": "7781efb589ce51553baf1fe1ff383e9cdcfa0bbba99b495728421899a7a2464f",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "close-grip-bench-press",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Close grip barbell bench press in safety power rack. Man supine feet planted, barbell light plates held above mid chest halfway up, grip about shoulder width (not touching hands), elbows close to torso, rack safety rails at chest level. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "close-grip-bench-press.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/close-grip-bench-press.webp",
+      "bytes": 73636,
+      "sha256": "b90d961bb022ef23af64a7efda4faf89f727d35199b93771ed89c66e6f18a63c",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "single-arm-cable-pushdown",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Single-arm cable triceps pushdown using high pulley and one D handle. Man faces tower, right elbow held beside right ribs, right forearm extended down near right thigh palm down. Cable visible angled from high pulley to hand. Left arm relaxed. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "single-arm-cable-pushdown.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/single-arm-cable-pushdown.webp",
+      "bytes": 57138,
+      "sha256": "fc3fbdc3ae25d677fd3e7c9c2ce427715b6898e8235720fa491f89205d4c4d41",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "reverse-grip-pushdown",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing reverse-grip cable triceps pushdown with straight short bar and high pulley. Both upper arms beside ribs, forearms reaching down near waist, palms facing upward under bar and wrists straight, weight light. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "reverse-grip-pushdown.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/reverse-grip-pushdown.webp",
+      "bytes": 51366,
+      "sha256": "a735a5d2c2deb75ea54b882931e42c5732be8a4402384262834f1f2127c3c56f",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "cross-body-cable-extension",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Standing single-arm cross-body cable triceps extension. High pulley on man's left; right hand holds D handle, right upper arm close to right side and elbow extends down toward right hip on a diagonal across front of torso. Cable visible from high left pulley, no collision. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "cross-body-cable-extension.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/cross-body-cable-extension.webp",
+      "bytes": 71102,
+      "sha256": "d7836669e554643a0332d4d76ee19bef9154c30fcafbadfe56292c044c43536a",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "dumbbell-floor-triceps-extension",
+      "prompt": "Use case: scientific-educational. Single photorealistic landscape 3:2 fitness exercise illustration. Full body of adult man wearing loose long black sports trousers, long-sleeved olive sports top and black trainers, on darkgreen gym floor mat. Show LYING TWO-DUMBBELL TRICEPS EXTENSION ON FLOOR. Man on his back, knees bent feet flat. Exactly TWO SEPARATE LIGHT DUMBBELLS, ONE IN EACH HAND, both clearly visible with daylight gap between them, neutral parallel grips. Both upper arms extend vertically upward from shoulders. Both elbows are flexed to 90 degrees, and forearms point backward, lowering the two dumbbells alongside the ears with generous distance from his face. Camera looking from front-foot-end 45 degrees toward man's head so the two hands and two dumbbells are visibly separated on left and right, NOT overlapping. Include mat and whole person head to toes. No bench. No single dumbbell shared between hands. Anatomically plausible two arms two legs. Soft lighting, forest-green studio gym. No lettering, logos or watermark.",
+      "file": "dumbbell-floor-triceps-extension.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/dumbbell-floor-triceps-extension.webp",
+      "bytes": 31046,
+      "sha256": "2b3dbc6ffecff83bc47ea8dbc5b91a42fff6368e3f1d25967c52c2ebd872f153",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "seated-overhead-triceps-extension",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Seated two-hand overhead dumbbell triceps extension. Man seated upright on bench, feet flat; both hands cradle one dumbbell upper head behind head, elbows point upward and slightly in, forearms bent with weight clearly behind head not neck. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "seated-overhead-triceps-extension.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/seated-overhead-triceps-extension.webp",
+      "bytes": 51176,
+      "sha256": "a91f6f2da379ffe85140adce52c0287b2cff9a86532bbbf17115b449711c58fd",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "machine-triceps-extension",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Seated triceps extension in dedicated selectorized machine with angled upper arm support pad and pivot. Upper arms resting on pad, hands grip parallel handles, elbows extend pushing lever down and forward. Feet planted, torso upright. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "machine-triceps-extension.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/machine-triceps-extension.webp",
+      "bytes": 75436,
+      "sha256": "12edd35dcf7d9ccf1f3f35f967c84c7de0c72365d759630a08c50051f8a34cf4",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "incline-barbell-press",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Incline barbell bench press on 30 degree incline bench within rack with safety bars. Man feet planted, bar with small plates over upper chest halfway pressed upward, medium comfortable grip, forearms near vertical, full rack visible. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "incline-barbell-press.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/incline-barbell-press.webp",
+      "bytes": 76186,
+      "sha256": "97475fbd8cd2fff88360f51371561104754ffafcbc0e51e071b2da50326dac03",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "smith-bench-press",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Flat bench press inside Smith machine. Man supine feet planted, hands medium grip on guided horizontal bar with small plates, safety catches just above chest, bar halfway pressed up, visible vertical rails and bench. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "smith-bench-press.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/smith-bench-press.webp",
+      "bytes": 73138,
+      "sha256": "dd0c47b6c23f4c30a6b1bd1d466a2850686651677424e56072563b3ccf9e13cd",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "smith-incline-press",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Incline bench press inside Smith machine with bench back at 30 degrees. Man supine reclined feet planted, hands medium grip, guided bar above upper chest halfway pressed upward, small plates and safety catches with vertical rails visible. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "smith-incline-press.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/smith-incline-press.webp",
+      "bytes": 63906,
+      "sha256": "706732daf20ec51d843e507649ed21cdb82d7359fd3ace4f0955acb23be0ff82",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    },
+    {
+      "id": "pec-deck",
+      "prompt": "Use case: scientific-educational. Asset type: single landscape 3:2 fitness exercise instruction photo for FitnessLegend. Photorealistic editorial photograph, adult male fully clothed in loose long black sports trousers and long-sleeved olive green sports top, black trainers, modest neutral styling. Dark forest-green gym, soft warm lighting with mint rimlight. Full person head to shoes and all relevant equipment, clean readable equipment mechanics, side three-quarter eye-level camera. Seated pec deck chest fly on selectorized butterfly machine. Man upright back supported, forearms vertical against padded levers in front of chest, elbows at slightly below shoulder height, arms halfway closing; feet planted, whole machine visible. Depict one anatomically plausible person with exactly two arms and legs, safe stable mid movement, no action collage, no inset, no labels, no logos, no text, no watermark. Avoid bare chest, shorts, tight or sexualized framing; no cropped limbs.",
+      "file": "pec-deck.webp",
+      "dimensions": [
+        1056,
+        704
+      ],
+      "width": 1056,
+      "height": 704,
+      "path": "exercise-photos/pec-deck.webp",
+      "bytes": 58288,
+      "sha256": "757aba565aa9fab4bef542ce14ac8d9886135577e72f1b8307c3b9bbb78e877d",
+      "type": "AI-generated fictional illustration",
+      "source": "OpenAI ImageGen, built-in"
+    }
+  ],
+  "project": "FitnessLegend",
+  "createdDate": "2026-11-07",
+  "processing": "Пропорциональное уменьшение до 1056×704 и WebP quality 80, без кадрирования."
+}

@@ -1,0 +1,18 @@
+{
+  "version": "8.0.0",
+  "exerciseCount": 124,
+  "archivedExerciseCount": 2,
+  "newExercises": 60,
+  "bicepsCount": 18,
+  "recipes": 24,
+  "trackerDays": 30,
+  "splitModes": 6,
+  "plannerRevision": 7,
+  "planB": true,
+  "performanceJournal": true,
+  "budgetMeals": true,
+  "videoLessons": true,
+  "decisionHistory": true,
+  "videoExerciseCount": 32,
+  "generalVideoLessons": 4
+}

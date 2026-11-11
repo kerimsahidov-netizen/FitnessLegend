@@ -1,0 +1,25 @@
+(function(root){
+ 'use strict';
+ function create(ctx){
+  const {E,Seed,esc,attr,icon,btn,notice,openModal,closeModal,getState,commit,toast,exerciseImage,onOpen,timerText,isTimerRunning,startRest,videoPanel,performancePanel,showList}=ctx;
+  let activeId=null,index=0;
+  const find=id=>Object.values(getState().plans).flatMap(p=>p.sessions).find(s=>s.id===id);
+  function show(id,atIndex=null){
+   const s=find(id);if(!s)return toast('Занятие больше недоступно.');if(activeId!==id)index=0;activeId=id;if(atIndex!==null)index=atIndex;index=Math.min(Math.max(0,index),s.blocks.length-1);
+   if(s.status!=='done')onOpen(id);const b=s.blocks[index],e=getState().catalog.find(e=>e.id===b.exerciseId),done=s.blocks.reduce((a,b)=>a+b.done.length,0),total=s.blocks.reduce((a,b)=>a+b.sets,0);
+   const next=index<s.blocks.length-1?getState().catalog.find(e=>e.id===s.blocks[index+1].exerciseId):null;
+   openModal('focus-workout','Режим зала',`<div class="focus-top"><span class="pill green">${esc(s.title)}</span>${btn('Все упражнения','focus-list','grid','ghost',`data-id="${attr(id)}"`)}</div><div class="focus-progress"><strong>${index+1}<small> / ${s.blocks.length}</small></strong><div><span>${done} из ${total} подходов отмечено</span><div class="bar"><i style="width:${done/total*100}%"></i></div></div></div><div class="focus-exercise-photo">${exerciseImage(e)}</div><div class="focus-exercise-name"><span class="eyebrow">${esc(Seed.focusFor(e))}</span><h3>${esc(e.name)}</h3><p>${b.sets} подходов · ориентир ${esc(b.reps)}</p></div>${performancePanel?.(s,index)||''}<div class="focus-sets">${Array.from({length:b.sets},(_,n)=>`<div class="focus-set ${b.done.includes(n)?'done':''}"><span>Подход ${n+1}</span><div>${btn(b.records?.some(r=>r.set===n)?'Изменить запись':'Вес и повторения','perf-open','edit','primary',`data-id="${attr(id)}" data-index="${index}" data-set="${n}" ${s.status==='done'?'disabled':''}`)}${btn(b.done.includes(n)?'Снять отметку':'Отметить без записи','focus-mark',b.done.includes(n)?'check':'plus','',`data-id="${attr(id)}" data-set="${n}" aria-pressed="${b.done.includes(n)}" ${s.status==='done'?'disabled':''}`)}</div></div>`).join('')}</div>${s.status!=='done'?`<section class="focus-rest"><div><span>Отдых между подходами</span><strong id="timer-value">${timerText()}</strong></div><div>${btn(isTimerRunning()?'Пауза':'Старт','timer-toggle',isTimerRunning()?'pause':'play','','id="timer-toggle"')}<div class="chips">${[60,90,120,180].map(n=>btn(n+' сек','focus-rest','','ghost',`data-value="${n}"`)).join('')}</div></div></section>`:''}<div class="focus-navigation">${btn('Предыдущее','focus-prev','left','',index===0?'disabled':'')}${btn(index===s.blocks.length-1?'Последнее упражнение':'Следующее','focus-next','arrow','primary',index===s.blocks.length-1?'disabled':'')}</div>${next?`<p class="focus-next-label">Далее: ${esc(next.name)}</p>`:''}<details class="focus-technique"><summary>Фото и пошаговая техника</summary><p>${esc(e.preparation||e.steps[0])}</p><ol>${e.steps.map(t=>`<li>${esc(t)}</li>`).join('')}</ol><p>${esc(e.breathing||e.tip)}</p><p><strong>Инвентарь:</strong> ${esc(e.equipmentNotes||e.equipment.map(k=>E.EQUIP[k]).join(', ')||'не требуется')}</p></details>${videoPanel?.(e)||''}<div class="planb-entry">${s.status!=='done'?btn('Зал занят / мало времени','planb-open','path','',`data-id="${attr(id)}"`):''}${btn('История изменений','decision-history','book','ghost',`data-id="${attr(id)}"`)}</div>${notice('Вес и повторения записываются вручную. Сравнивай одинаковые варианты упражнения и способ учёта веса. Автоматического повышения нагрузки нет.')}<div class="modal-buttons">${btn('Сохранить и выйти','modal-close')}${s.status!=='done'?btn('Завершить занятие','finish-session','check','primary',`data-id="${attr(id)}" ${done===total?'':'disabled'}`):btn('Готово','modal-close','check','primary')}</div>`,true);
+  }
+  function action(a,target){
+   if(!['focus-open','focus-list','focus-prev','focus-next','focus-rest','focus-mark'].includes(a))return false;
+   if(a==='focus-open'){show(target.dataset.id);return true;}if(!activeId)return true;
+   if(a==='focus-list'){const id=activeId;activeId=null;showList(id);return true;}
+   if(a==='focus-prev'){index--;show(activeId);return true;}if(a==='focus-next'){index++;show(activeId);return true;}
+   if(a==='focus-rest'){const seconds=Number(target.dataset.value);if([60,90,120,180].includes(seconds))startRest(seconds);return true;}
+   if(a==='focus-mark'){const candidate=E.clone(getState()),s=Object.values(candidate.plans).flatMap(p=>p.sessions).find(s=>s.id===activeId),b=s?.blocks[index],n=Number(target.dataset.set);if(!b||s.status==='done'||!Number.isInteger(n)||n<0||n>=b.sets)return true;const was=b.done.includes(n);b.done=was?b.done.filter(x=>x!==n):b.done.concat(n);if(commit(candidate)){show(activeId);if(!was)startRest(90);}else toast('Не удалось сохранить отметку.');return true;}
+   return true;
+  }
+  return {show,action,isActive:id=>activeId===id,clear:()=>{activeId=null;}};
+ }
+ const value={create};root.FLFocusUI=value;if(typeof module!=='undefined')module.exports=value;
+})(typeof window!=='undefined'?window:globalThis);
