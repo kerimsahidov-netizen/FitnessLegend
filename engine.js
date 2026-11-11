@@ -6,6 +6,9 @@
  const PlanB=typeof module!=='undefined'?require('./plan-b.js'):root.FLPlanB;
  const Tracker=typeof module!=='undefined'?require('./tracker.js'):root.FLTracker;
  const EQUIP={chair:'Устойчивый стул',wall:'Стена',dumbbell:'Гантели',bench:'Скамья',step:'Степ-платформа',pullup:'Турник',assistedpullup:'Гравитрон',barbell:'Штанга',rack:'Стойки со страховочными упорами',latmachine:'Верхний блок',cable:'Блочный тренажёр',legpress:'Жим ногами',legextension:'Разгибание ног',legcurl:'Сгибание ног',chestpress:'Жим от груди',bike:'Велотренажёр',ezbar:'EZ-гриф',preacher:'Скамья Скотта',curlmachine:'Тренажёр для бицепса',tricepsmachine:'Тренажёр для трицепса',smith:'Машина Смита',pecdeck:'Баттерфляй',tbar:'Т-гриф',highrow:'Рычажная тяга',band:'Эспандер',landmine:'Лэндмайн',hack:'Гакк-тренажёр',seatedcalf:'Подъём на носки сидя',standingcalf:'Подъём на носки стоя',lyinglegcurl:'Сгибание ног лёжа',elliptical:'Эллиптический тренажёр',rower:'Гребной тренажёр'};
+ const GENDERS={male:'Мужской',female:'Женский'};
+ const illustrationGender=profile=>profile?.gender==='female'?'female':'male';
+ const exercisePhotoPath=(id,profile,active=true)=>'exercise-photos/'+(active?'':'archived/')+illustrationGender(profile)+'/'+encodeURIComponent(id)+'.webp';
  const clone=x=>JSON.parse(JSON.stringify(x));
  const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
  const parse=s=>new Date(s+'T12:00:00');
@@ -24,6 +27,7 @@
  function allowedExercises(profile,exercises){return Training.allowed(profile,exercises)}
  const distance=(a,b)=>Math.abs((Date.UTC(...a.split('-').map((n,i)=>i===1?Number(n)-1:Number(n)))-Date.UTC(...b.split('-').map((n,i)=>i===1?Number(n)-1:Number(n))))/86400000);
  function makePlan(profile,exercises,week,occupied=[],minDate=null){return Training.makePlan(profile,exercises,week,occupied,minDate,{addDays});}
+ function fullPlanWeek(profile,exercises,week,today){const current=monday(today),start=week<current?current:week;return start===current&&Training.selectedSchedule(profile,Training.allowed(profile,exercises)).some(slot=>addDays(start,slot.day)<today)?addDays(start,7):start;}
  function rebuildPlan(profile,exercises,week,existing,occupied=[],minDate=null){return Training.rebuild(profile,exercises,week,existing,occupied,minDate,{addDays});}
  function moveOptions(plan,session,profile,occupied=plan.sessions,minDate=null){
    return Array.from({length:7},(_,i)=>addDays(plan.week,i)).filter(date=>date>session.date&&(!minDate||date>=minDate)&&profile.days.includes((parse(date).getDay()+6)%7)&&Training.canPlace(date,session.focusGroups,session.trainingMode,occupied,session.id));
@@ -39,6 +43,7 @@
  const https=s=>s===''||/^https:\/\//i.test(s);
  function bodyValidation(profile,required=false){
    if(!profile||typeof profile!=='object')return 'Заполни параметры профиля.';
+   if(profile.gender!==undefined&&!Object.hasOwn(GENDERS,profile.gender))return 'Выбери пол: мужской или женский.';
    const fields=[
      ['age','Возраст',18,100,true],
      ['height','Рост',100,250,false],
@@ -55,7 +60,7 @@
    }
    return '';
  }
- function validate(s){
+ function validateState(s){
    if(s?.plannerRevision!==undefined&&(!Number.isInteger(s.plannerRevision)||s.plannerRevision<0||s.plannerRevision>999))return false;
    if(s?.plannerUpgradeNotice!==undefined&&!str(s.plannerUpgradeNotice,1000))return false;
    if(s?.challenges!==undefined&&!Tracker?.validateCollection(s.challenges,s.activeChallengeId??null))return false;
@@ -76,7 +81,7 @@
    const t=s.targets;if(!num(t.kcal,1000,6000)||!['p','f','c'].every(k=>num(t[k],10,700))||!num(t.water,250,5000))return false;
    if(!s.measurements.every(m=>record(m)&&date(m.date)&&num(m.weight,25,350)&&str(m.note,500))||new Set(s.measurements.map(m=>m.date)).size!==s.measurements.length)return false;
    if(!Object.entries(s.water).every(([d,v])=>date(d)&&num(v,0,10000)))return false;
-   if(s.profile){const p=s.profile;if(!str(p.name,60)||!['maintain','lose','gain'].includes(p.goal)||!['beginner','return','regular'].includes(p.level)||!['home','gym','mixed'].includes(p.place)||!Array.isArray(p.equipment)||!p.equipment.every(e=>eq.includes(e))||!Array.isArray(p.days)||!p.days.length||!p.days.every(n=>Number.isInteger(n)&&n>=0&&n<=6)||!num(p.minutes,15,60)||!num(p.budget,0,5000)||bodyValidation(p)||!Training.profileValid(p))return false;}
+   if(s.profile){const p=s.profile;if(!str(p.name,60)||!['maintain','lose','gain'].includes(p.goal)||!['beginner','return','regular'].includes(p.level)||!['home','gym','mixed'].includes(p.place)||!Array.isArray(p.equipment)||!p.equipment.every(e=>eq.includes(e))||!Array.isArray(p.days)||!p.days.length||p.days.length>7||new Set(p.days).size!==p.days.length||!p.days.every(n=>Number.isInteger(n)&&n>=0&&n<=6)||!num(p.minutes,15,60)||!num(p.budget,0,5000)||bodyValidation(p)||!Training.profileValid(p))return false;}
    const ids=new Set(s.catalog.map(e=>e.id));
    if(s.favorites!==undefined&&(!Array.isArray(s.favorites)||s.favorites.length>s.catalog.length||new Set(s.favorites).size!==s.favorites.length||!s.favorites.every(id=>ids.has(id))))return false;
    const sessionIds=new Set();
@@ -94,6 +99,7 @@
    }
    return true;
  }
- root.FLEngine={EQUIP,clone,iso,parse,addDays,monday,bestDays,allowedExercises,makePlan,rebuildPlan,training:Training,moveOptions,totals,initial,validate,bodyValidation};
+ function validate(s){try{return validateState(s);}catch{return false;}}
+ root.FLEngine={EQUIP,GENDERS,illustrationGender,exercisePhotoPath,clone,iso,parse,addDays,monday,bestDays,allowedExercises,makePlan,fullPlanWeek,rebuildPlan,training:Training,moveOptions,totals,initial,validate,bodyValidation};
  if(typeof module!=='undefined')module.exports=root.FLEngine;
 })(typeof window!=='undefined'?window:globalThis);

@@ -1,5 +1,5 @@
 {
-  "version": "8.0.0",
+  "version": "8.1.0",
   "exerciseCount": 124,
   "archivedExerciseCount": 2,
   "newExercises": 60,
@@ -14,5 +14,9 @@
   "videoLessons": true,
   "decisionHistory": true,
   "videoExerciseCount": 32,
-  "generalVideoLessons": 4
+  "generalVideoLessons": 4,
+  "genderIllustrations": {
+    "male": 124,
+    "female": 124
+  }
 }
